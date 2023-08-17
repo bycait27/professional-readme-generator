@@ -1,6 +1,7 @@
+// variable that contains the current year
 const currentYear = new Date().getFullYear();
 
-// TODO: Create a function that returns a license badge based on which license is passed in
+// a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   switch(license) {
@@ -52,7 +53,7 @@ function renderLicenseBadge(license) {
   }
 };
 
-// TODO: Create a function that returns the license link
+// a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   switch(license) {
@@ -105,86 +106,87 @@ function renderLicenseLink(license) {
 
 };
 
-// TODO: Create a function that returns the license section of README
+// a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
-  switch(license) {
-    case 'None':
-      return '';
-      break;
-    case 'Apache License 2.0':
-      return `
-      Copyright (c) ${currentYear} ${data.name}
-      Notice: This project is covered under the Apache License 2.0.`;
-      break;
-    case 'GNU General Public License v3.0':
-      return `
-      Copyright (c) ${currentYear} ${data.name}
-      Notice: This project is covered under the GNU General Public License v3.0.`;
-      break;
-    case 'MIT License':
-      return `
-      Copyright (c) ${currentYear} ${data.name}
-      Notice: This project is covered under the MIT License.`;
-      break;
-    case 'BSD 2-Clause License':
-      return `
-      Copyright (c) ${currentYear} ${data.name}
-      Notice: This project is covered under the BSD 2-Clause License.`;
-      break;
-    case 'BSD 3-Clause License':
-      return `
-      Copyright (c) ${currentYear} ${data.name}
-      Notice: This project is covered under the BSD 3-Clause License.`;
-      break;
-    case 'Boost Software License':
-      return `
-      Copyright (c) ${currentYear} ${data.name}
-      Notice: This project is covered under the Boost Software License.`;
-      break;
-    case 'Creative Commons Zero v1.0 Universal':
-      return `
-      Copyright (c) ${currentYear} ${data.name}
-      Notice: This project is covered under the Creative Commons Zero v1.0 Universal License.`;
-      break;
-    case 'Eclipse Public License 2.0':
-      // find license section
-      return `
-      Copyright (c) ${currentYear} ${data.name}
-      Notice: This project is covered under the Eclipse Public License 2.0.`;
-      break;
-    case 'GNU Afferal General Public License v3.0':
-      return `
-      Copyright (c) ${currentYear} ${data.name}
-      Notice: This project is covered under the GNU Afferal General Public License v3.0.`;
-      break;
-    case 'GNU General Public License v2.0':
-      return `
-      Copyright (c) ${currentYear} ${data.name}
-      Notice: This project is covered under the GNU General Public License v2.0.`;
-      break;
-    case 'GNU Lesser General Public License v2.1':
-       // find license section
-      return `
-      Copyright (c) ${currentYear} ${data.name}
-      Notice: This project is covered under the GNU Lesser General Public License v2.1.`;
-      break;
-    case 'Mozilla Public License 2.0':
-      return `
-      Copyright (c) ${currentYear} ${data.name}
-      Notice: This project is covered under the Mozilla Public License 2.0.`;
-      break;
-    case 'The Unlicense':
-      return `
-      Copyright (c) ${currentYear} ${data.name}
-      Notice: This project is covered under the Unlicense.`;
-      break;
+// NOT USING THIS FUNCTION
+// function renderLicenseSection(license) {
+//   switch(license) {
+//     case 'None':
+//       return '';
+//       break;
+//     case 'Apache License 2.0':
+//       return `
+//       Copyright (c) ${currentYear} ${data.name}
+//       Notice: This project is covered under the Apache License 2.0.`;
+//       break;
+//     case 'GNU General Public License v3.0':
+//       return `
+//       Copyright (c) ${currentYear} ${data.name}
+//       Notice: This project is covered under the GNU General Public License v3.0.`;
+//       break;
+//     case 'MIT License':
+//       return `
+//       Copyright (c) ${currentYear} ${data.name}
+//       Notice: This project is covered under the MIT License.`;
+//       break;
+//     case 'BSD 2-Clause License':
+//       return `
+//       Copyright (c) ${currentYear} ${data.name}
+//       Notice: This project is covered under the BSD 2-Clause License.`;
+//       break;
+//     case 'BSD 3-Clause License':
+//       return `
+//       Copyright (c) ${currentYear} ${data.name}
+//       Notice: This project is covered under the BSD 3-Clause License.`;
+//       break;
+//     case 'Boost Software License':
+//       return `
+//       Copyright (c) ${currentYear} ${data.name}
+//       Notice: This project is covered under the Boost Software License.`;
+//       break;
+//     case 'Creative Commons Zero v1.0 Universal':
+//       return `
+//       Copyright (c) ${currentYear} ${data.name}
+//       Notice: This project is covered under the Creative Commons Zero v1.0 Universal License.`;
+//       break;
+//     case 'Eclipse Public License 2.0':
+//       // find license section
+//       return `
+//       Copyright (c) ${currentYear} ${data.name}
+//       Notice: This project is covered under the Eclipse Public License 2.0.`;
+//       break;
+//     case 'GNU Afferal General Public License v3.0':
+//       return `
+//       Copyright (c) ${currentYear} ${data.name}
+//       Notice: This project is covered under the GNU Afferal General Public License v3.0.`;
+//       break;
+//     case 'GNU General Public License v2.0':
+//       return `
+//       Copyright (c) ${currentYear} ${data.name}
+//       Notice: This project is covered under the GNU General Public License v2.0.`;
+//       break;
+//     case 'GNU Lesser General Public License v2.1':
+//        // find license section
+//       return `
+//       Copyright (c) ${currentYear} ${data.name}
+//       Notice: This project is covered under the GNU Lesser General Public License v2.1.`;
+//       break;
+//     case 'Mozilla Public License 2.0':
+//       return `
+//       Copyright (c) ${currentYear} ${data.name}
+//       Notice: This project is covered under the Mozilla Public License 2.0.`;
+//       break;
+//     case 'The Unlicense':
+//       return `
+//       Copyright (c) ${currentYear} ${data.name}
+//       Notice: This project is covered under the Unlicense.`;
+//       break;
 
-  }
+//   }
 
-};
+// };
 
-// TODO: Create a function to generate markdown for README
+// a function to generate markdown for README with user input from prompts
 function generateMarkdown(data) {
   let output = `
   ${renderLicenseBadge(data.license)}
@@ -198,7 +200,7 @@ function generateMarkdown(data) {
   - [Usage](#usage)
   - [Credits](#credits)
   - [License](#license)
-  - [How to Contribute](#how to contribute)
+  - [How to Contribute](#how-to-contribute)
   - [Tests](#tests)
 
   ## Installation
@@ -214,7 +216,8 @@ function generateMarkdown(data) {
   ## License
   ${data.license}
   ${renderLicenseLink(data.license)}
-  ${renderLicenseSection(data.license)}
+  Copyright (c) ${currentYear} ${data.name}
+  Notice: This project is covered under the ${data.license}.
 
   ## How to Contribute
   ![Contributor Covenant](https://www.contributor-covenant.org/)
@@ -230,4 +233,5 @@ function generateMarkdown(data) {
 return output;
 };
 
+// exports the generateMarkdown function
 module.exports = generateMarkdown;
