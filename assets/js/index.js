@@ -45,11 +45,20 @@ inquirer
 
 
 // TODO: Create a function to write README file
-.then(response => {
-    fs.writeFile('README.md', data, err =>  {
-        err ? console.error(err) : console.log('README file successfully generated!');
-    })
-})
+const writeToFile = data => {
+    return new Promise((resolve, reject) => {
+        fs.writeFile('README.md', data, err =>  {
+            err ? console.error(err) : console.log('README file successfully generated!');
+        })
+}
+)};
+
+
+// .then(response => {
+//     fs.writeFile('README.md', data, err =>  {
+//         err ? console.error(err) : console.log('README file successfully generated!');
+//     })
+// })
 
 // TODO: Create a function to initialize app
 function init() {}
