@@ -1,4 +1,5 @@
 // TODO: Include packages needed for this application
+const fs = require('fs')
 const inquirer = require('inquirer');
 
 // TODO: Create an array of questions for user input
@@ -38,11 +39,19 @@ inquirer
             name: 'license',
             choices: ['None', 'Apache License 2.0', 'GNU General Public License v3.0', 'MIT License', 'BSD 2-Clause License', 'BSD 3-Clause License', 'Boost Software License', 'Creative Commons Zero v1.0 Universal', 'Eclipse Public License 2.0', 'GNU Afferal General Public License v3.0', 'GNU General Public License v2.0', 'GNU Lesser General Public License v2.1', 'Mozilla Public License 2.0', 'The Unlicense'],
         },
-    ]);
+    ])
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+.then(response => {
+    let data = '';
+    fs.writeFile('README.md', data, err =>  {
+        err ? console.error(err) : console.log('README file successfully generated!');
+    })
+})
+fs.writeFile('README.md', data, err =>  {
+    err ? console.error(err) : console.log('README file successfully generated!');
+});
 
 // TODO: Create a function to initialize app
 function init() {}
