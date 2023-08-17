@@ -1,10 +1,10 @@
-// TODO: Include packages needed for this application
+// packages needed for this application
 const fs = require('fs')
 const inquirer = require('inquirer');
 // import generateMarkdown function
 const generateMarkdown = require('./utils/generateMarkdown');
 
-// TODO: Create an array of questions for user input
+// An array of questions for user input
 const questions = () => {
     return inquirer.prompt([
     {
@@ -14,24 +14,50 @@ const questions = () => {
     },
     {
         type: 'input',
-        message: 'What is the name of your project?',
-        name: 'projectName',
+        message: 'What is your GitHub username?',
+        name: 'github',
     },
     {
         type: 'input',
-        message: 'Provide a short description explaining what, why, and how of your project.',
+        message: 'What is your email?',
+        name: 'email',
+    },
+    {
+        type: 'input',
+        message: 'What is the title of your project?',
+        name: 'title',
+    },
+    {
+        type: 'input',
+        message: 'Provide a short description explaining the what, why, and how of your project.',
         name: 'description',
     },
     {
         type: 'input',
-        // figure out how to do screenshots part
-        message: 'Provide instructions and examples for use. Include screenshots as needed.',
+        message: 'Provide installation instructions for the project.',
+        name: 'installation',
+        default: 'Type npm install into the terminal.',
+    },
+    {
+        type: 'input',
+        message: 'Provide instructions and examples for use.',
         name: 'usage',
     },
     {
         type: 'input',
-        message: 'List any collaborators or references you used to make your project.',
+        message: 'Provide the link to your deployed application.',
+        name: 'link',
+    },
+    {
+        type: 'input',
+        message: 'List any names of those contributing to this project.',
         name: 'credits',
+    },
+    {
+        type: 'input',
+        message: 'Provide instructions for testing.',
+        name: 'tests',
+        default: 'Type npm test into the terminal.',
     },
     {
         type: 'list',
@@ -42,23 +68,23 @@ const questions = () => {
 ])
 };
 
-// TODO: Create a function to write README file
+// a function to write the README file
 const writeToFile = data => {
     return new Promise((resolve, reject) => {
-        fs.writeFile('README.md', data, err =>  {
-            err ? console.error(err) : console.log('README file created!');
+        fs.writeFile('generatedREADME.md', data, err =>  {
+            err ? console.error(err) : console.log('Your README was successfully generated!');
         })
 }
 )};
 
-// TODO: Create a function to initialize app
+// a function to initialize the app
 function init() {
     questions().then((response) => generateMarkdown(response))
     .then((res) => {
         writeToFile(res);
-        console.log('Your README was successfully generated!');
+        // console.log('Your README was successfully generated!');
     });
 }
 
-// Function call to initialize app
+// function call to initialize app
 init();

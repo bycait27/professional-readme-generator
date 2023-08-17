@@ -1,3 +1,5 @@
+const currentYear = new Date().getFullYear();
+
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
@@ -111,63 +113,71 @@ function renderLicenseSection(license) {
       return '';
       break;
     case 'Apache License 2.0':
-      return '';
+      return `
+      Copyright (c) ${currentYear} ${data.name}
+      Notice: This project is covered under the Apache License 2.0.`;
       break;
     case 'GNU General Public License v3.0':
-      return '';
+      return `
+      Copyright (c) ${currentYear} ${data.name}
+      Notice: This project is covered under the GNU General Public License v3.0.`;
       break;
     case 'MIT License':
-      // return `Copyright (c) ${year} ${firstLastName}
-
-      // Permission is hereby granted, free of charge, to any person obtaining a copy
-      // of this software and associated documentation files (the "Software"), to deal
-      // in the Software without restriction, including without limitation the rights
-      // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-      // copies of the Software, and to permit persons to whom the Software is
-      // furnished to do so, subject to the following conditions:
-      
-      // The above copyright notice and this permission notice shall be included in all
-      // copies or substantial portions of the Software.
-      
-      // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-      // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-      // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-      // AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-      // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-      // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-      // SOFTWARE.`;
+      return `
+      Copyright (c) ${currentYear} ${data.name}
+      Notice: This project is covered under the MIT License.`;
       break;
     case 'BSD 2-Clause License':
-      return '';
+      return `
+      Copyright (c) ${currentYear} ${data.name}
+      Notice: This project is covered under the BSD 2-Clause License.`;
       break;
     case 'BSD 3-Clause License':
-      return '';
+      return `
+      Copyright (c) ${currentYear} ${data.name}
+      Notice: This project is covered under the BSD 3-Clause License.`;
       break;
     case 'Boost Software License':
-      return '';
+      return `
+      Copyright (c) ${currentYear} ${data.name}
+      Notice: This project is covered under the Boost Software License.`;
       break;
     case 'Creative Commons Zero v1.0 Universal':
-      return '';
+      return `
+      Copyright (c) ${currentYear} ${data.name}
+      Notice: This project is covered under the Creative Commons Zero v1.0 Universal License.`;
       break;
     case 'Eclipse Public License 2.0':
       // find license section
-      return '';
+      return `
+      Copyright (c) ${currentYear} ${data.name}
+      Notice: This project is covered under the Eclipse Public License 2.0.`;
       break;
     case 'GNU Afferal General Public License v3.0':
-      return '';
+      return `
+      Copyright (c) ${currentYear} ${data.name}
+      Notice: This project is covered under the GNU Afferal General Public License v3.0.`;
       break;
     case 'GNU General Public License v2.0':
-      return '';
+      return `
+      Copyright (c) ${currentYear} ${data.name}
+      Notice: This project is covered under the GNU General Public License v2.0.`;
       break;
     case 'GNU Lesser General Public License v2.1':
        // find license section
-      return '';
+      return `
+      Copyright (c) ${currentYear} ${data.name}
+      Notice: This project is covered under the GNU Lesser General Public License v2.1.`;
       break;
     case 'Mozilla Public License 2.0':
-      return '';
+      return `
+      Copyright (c) ${currentYear} ${data.name}
+      Notice: This project is covered under the Mozilla Public License 2.0.`;
       break;
     case 'The Unlicense':
-      return '';
+      return `
+      Copyright (c) ${currentYear} ${data.name}
+      Notice: This project is covered under the Unlicense.`;
       break;
 
   }
@@ -177,22 +187,45 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   let output = `
-  # ${data.projectName}
+  ${renderLicenseBadge(data.license)}
+  # ${data.title}
 
   ## Description
   ${data.description}
 
+  ## Table of Contents
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Credits](#credits)
+  - [License](#license)
+  - [How to Contribute](#how to contribute)
+  - [Tests](#tests)
+
+  ## Installation
+  ${data.installation}
+
   ## Usage
   ${data.usage}
+  ![website link](${data.link})
 
   ## Credits
   ${data.credits}
 
   ## License
   ${data.license}
+  ${renderLicenseLink(data.license)}
+  ${renderLicenseSection(data.license)}
 
-  ## Badges
-  renderLicenseBadge();
+  ## How to Contribute
+  ![Contributor Covenant](https://www.contributor-covenant.org/)
+
+  ## Tests
+  ${data.tests}
+
+  ## Questions
+  If you have any questions, please contact me at my GitHub account or email address below:
+  ${data.github}
+  ${data.email}
 `;
 return output;
 };
