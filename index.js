@@ -1,5 +1,6 @@
-// packages needed for this application
+// required to write a file
 const fs = require('fs')
+// inquirer package needed for this application
 const inquirer = require('inquirer');
 // import generateMarkdown function
 const generateMarkdown = require('./utils/generateMarkdown');
@@ -36,7 +37,7 @@ const questions = () => {
         type: 'input',
         message: 'Provide installation instructions for the project.',
         name: 'installation',
-        default: 'Type npm install into the terminal.',
+        default: 'Type \"npm install\" into the terminal.',
     },
     {
         type: 'input',
@@ -57,7 +58,7 @@ const questions = () => {
         type: 'input',
         message: 'Provide instructions for testing.',
         name: 'tests',
-        default: 'Type npm test into the terminal.',
+        default: 'Type \"npm test\" into the terminal.',
     },
     {
         type: 'list',
@@ -70,19 +71,16 @@ const questions = () => {
 
 // a function to write the README file
 const writeToFile = data => {
-    return new Promise((resolve, reject) => {
-        fs.writeFile('generatedREADME.md', data, err =>  {
+    return fs.writeFile('generatedREADME.md', data, err =>  {
             err ? console.error(err) : console.log('Your README was successfully generated!');
         })
-}
-)};
+};
 
 // a function to initialize the app
 function init() {
     questions().then((response) => generateMarkdown(response))
     .then((res) => {
         writeToFile(res);
-        // console.log('Your README was successfully generated!');
     });
 }
 
