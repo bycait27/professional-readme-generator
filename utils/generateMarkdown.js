@@ -221,7 +221,8 @@ function generateMarkdown(data) {
   Notice: This project is covered under the ${data.license}.
 
   ## How to Contribute
-  ![Contributor Covenant](https://www.contributor-covenant.org/)
+  
+  [Contributor Covenant](https://www.contributor-covenant.org/)
 
   ## Tests
   ${data.tests}
