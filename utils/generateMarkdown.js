@@ -208,7 +208,8 @@ function generateMarkdown(data) {
 
   ## Usage
   ${data.usage}
-  ![website link](${data.link})
+  
+  [website link](${data.link})
 
   ## Credits
   ${data.credits}
