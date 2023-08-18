@@ -12,9 +12,11 @@ Install npm inquirer in order to run the prompts.
 
 Once the user has installed the appropriate packages, they will type "node index.js" into the terminal. This will cue the program to start and the prompts will appear one by one. Once the user has submitted all their responses, they should see a message in the terminal stating that their README was successfully generated. The generated file will have the name of "generatedREADME.md," which will be listed among the files in their current folder. The user can right click on the README file and "Open Preview" to see their generated professional README!
 
+[tutorial](https://drive.google.com/file/d/1LuRIQft2z8xBdGbsHa6-3aoH2eqqrACS/view)
+
 ## Credits
 
-![npm inquirer](https://www.npmjs.com/package/inquirer)
+[npm inquirer](https://www.npmjs.com/package/inquirer)
 
 ## License
 
