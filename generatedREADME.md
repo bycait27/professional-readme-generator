@@ -1,9 +1,9 @@
 
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]
-  # Project Title
+  
+  # Title
 
   ## Description
-  Short description explaining the what, why, and how of my project.
+  Short description.
 
   ## Table of Contents
   - [Installation](#installation)
@@ -17,18 +17,18 @@
   Type "npm install" into the terminal.
 
   ## Usage
-  List detailed instructions and examples for use here.
   
-  [website link](link to deployed app:)
+  
+  [website link]()
 
   ## Credits
-  other contributors
+  
 
   ## License
-  MIT License
+  None
   
-  Copyright (c) 2023 Caitlin Ash
-  Notice: This project is covered under the MIT License.
+  Copyright (c) 2025 Caitlin Ash
+  Notice: This project is covered under the None.
 
   ## How to Contribute
   
