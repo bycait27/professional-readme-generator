@@ -1,43 +1,93 @@
-# Professional README Generator
+# README Generator
 
-## Description
+A command-line application that dynamically generates professional README.md files from user input, streamlining the documentation process for developers. 
 
-This is a program built with Node.js and npm inquirer. It generates a README file that follows the guidelines for a professional README based on input from the user via the terminal. This project was built to make it a little easier for developers to create their README files for their projects. It allows the developer to spend more time focusing on their project. While building this program, I learned a lot about how importing and exporting functions work as well as best ways to input the data the user types into the terminal. I think this really improved my JavaScript and Node.js skills!
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Dependencies](#dependencies)
+- [Supported Licenses](#supported-licenses)
+- [License](#license)
+- [Contact](#contact)
+
+## Overview 
+
+This Node.js application automates README creation by prompting users for project information and generating a well-structured, professional README file. The tool eliminates the repetitive task of formatting README files and ensures consistency across projects.
+
+## Features 
+**- Interactive Prompts:** Guided questionnaire covering all essential README sections  
+**- License Integration:** Support for 14 popular open-source licenses with automatic badge generation  
+**- Professional Formatting:** Generates properly structured markdown with table of contents  
+**- Customizable Templates:** Flexible template system for consistent documentation  
+**- Quick Setup:** Simple installation and usage process  
 
 ## Installation
 
-Install npm inquirer in order to run the prompts.
+1. Clone the repository:
+
+```bash
+git clone git@github.com:bycait27/professional-readme-generator.git
+cd professional-readme-generator
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
 
 ## Usage
 
-Once the user has installed the appropriate packages, they will type "node index.js" into the terminal. This will cue the program to start and the prompts will appear one by one. Once the user has submitted all their responses, they should see a message in the terminal stating that their README was successfully generated. The generated file will have the name of "generatedREADME.md," which will be listed among the files in their current folder. The user can right click on the README file and "Open Preview" to see their generated professional README!
+1. Run the application:
 
-[tutorial](https://drive.google.com/file/d/1LuRIQft2z8xBdGbsHa6-3aoH2eqqrACS/view)
+```bash 
+node index.js
+```
 
-## Credits
+2. Follow the interactive prompts to provide:
+- Project title and description 
+- Installation instructions 
+- Usage information
+- Contribution guidelines 
+- Test instructions
+- License selection 
+- Contact information 
 
-[npm inquirer](https://www.npmjs.com/package/inquirer)
+3. The generated README will be saved as `generatedREADME.md` in your project directory.
 
-## License
+## Dependencies 
 
-MIT License
+- **inquirer:** ^8.2.4 - Interactive command-line user interface 
 
-Copyright (c) 2023 Caitlin Ash
+## Supported Licenses 
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+The application supports automatic badge generation for:
+- Apache License 2.0 
+- GNU General Public License v3.0
+- MIT License 
+- BSD 2-Clause & 3-Clause License 
+- Boost Software License
+- Creative Commons Zero v1.0 Universal 
+- Eclipse Public License 2.0 
+- GNU Affero General Public License v3.0
+- GNU General Public License v2.0 
+- GNU Lesser General Public License v2.1 
+- Mozilla Public License 2.0 
+- The Unlicense 
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## License 
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
+
+see LICENSE file for more details
+
+## Contact
+
+**GitHub:** [@bycait27](https://github.com/bycait27)  
+**Portfolio Website:** [caitlinash.io](https://caitlinash.io/)  
+**LinkedIn:** [Caitlin Ash](https://www.linkedin.com/in/caitlin-ash/)  
+
+---
+*This project was originally created as part of my Full-Stack Developer Bootcamp program.*
